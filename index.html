@@ -45,6 +45,7 @@ title: "Connecticut Real Estate, Fiscal & Demographic Analysis"
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   }
+  
 
   h2 {
     color: #1a1a1a;
@@ -80,6 +81,41 @@ title: "Connecticut Real Estate, Fiscal & Demographic Analysis"
     color: #555;
     margin-top: 2rem;
   }
+
+  ul.analysis-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  ul.analysis-links li {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+
+  ul.analysis-links li:hover {
+    background-color: #eef5ff;
+    border-color: #0077cc;
+    box-shadow: 0 4px 10px rgba(0, 119, 204, 0.05);
+    cursor: pointer;
+  }
+
+  ul.analysis-links li a {
+    color: #003366;
+    text-decoration: none;
+    display: block;
+    font-weight: 500;
+  }
+
+  ul.analysis-links li a:hover {
+    text-decoration: underline;
+  }
+
+  
 </style>
 
 <div class="overlay">
@@ -118,12 +154,13 @@ title: "Connecticut Real Estate, Fiscal & Demographic Analysis"
 
   <section>
     <h2>Explore Analyses</h2>
-    <ul>
-      <li><a href="{{ site.baseurl }}/real-estate.html">Real Estate Sales Trends in Connecticut (2001–2022)</a></li>
-      <li><a href="{{ site.baseurl }}/fiscal-indicators.html">Municipal Fiscal and Economic Analysis (2019–2024)</a></li>
-      <li><a href="{{ site.baseurl }}/population-projections.html">Demographic Projections and Housing Implications (2015–2040)</a></li>
+    <ul class="analysis-links">
+      <li><a href="{{ site.baseurl }}/real-estate.html">Real Estate Sales Trends in Connecticut (2001–2022)  &rarr; </a></li>
+      <li><a href="{{ site.baseurl }}/fiscal-indicators.html">Municipal Fiscal and Economic Analysis (2019–2024)  &rarr; </a></li>
+      <li><a href="{{ site.baseurl }}/population-projections.html">Demographic Projections and Housing Implications (2015–2040)  &rarr;</a></li>
     </ul>
   </section>
+
 
   <section>
     <h2>Project Team</h2>
