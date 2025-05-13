@@ -1,54 +1,159 @@
 ---
 layout: default
-title: [Your Page Title]
+title: Integrated Market and Population Insights
 ---
 
+<style>
+  header.page-header {
+    display: none;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+    background: url('{{ site.baseurl }}/assets/images/765952-2048x1367-desktop-hd-hartford-connecticut-wallpaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .overlay {
+    background-color: rgba(255, 255, 255, 0.92);
+    min-height: 100vh;
+    padding: 2rem;
+  }
+
+  h1 {
+    color: #2c3e50;
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 0.2rem;
+  }
+
+  h2 {
+    color: #1a1a1a;
+    margin-top: 2rem;
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    color: #003366;
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+  }
+
+  p {
+    color: #444;
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+    text-align: justify;
+  }
+
+  .viz-placeholder {
+    background: #f0f0f0;
+    border-radius: 8px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+    font-style: italic;
+    margin: 1rem 0 2rem 0;
+  }
+
+  a {
+    color: #003366;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+
 <div class="overlay">
-  <h1>[Your Page Title]</h1>
+  <h1>Integrated Market and Population Insights</h1>
 
-  <section>
-    <h2>1. Dataset Description</h2>
-    <p>
-      Briefly introduce the dataset: what it contains, its source, the time span, and the unit of analysis (e.g., towns, years, transactions).
-    </p>
-  </section>
+<section style="padding-top: 2rem;">
+  <h3>How Taxes and Home Prices Expose Deeper Town-Level Inequities</h3>
+  <p style="text-align: justify;">
+    The relationship between property tax rates and median home prices across Connecticut towns reveals a striking imbalance in fiscal realities. As this interactive scatter plot illustrates, towns like <strong>Greenwich</strong> and <strong>Darien</strong> enjoy high median home values—often exceeding $1 million—while maintaining some of the lowest mill rates in the state. Their affluent tax bases allow them to fund services without placing a heavy burden on individual households. On the opposite end of the spectrum, places like <strong>Hartford</strong> and <strong>Waterbury</strong> are trapped in a vicious cycle: their lower home values require significantly higher tax rates to generate the same revenue, amplifying financial stress on already struggling residents. These towns must do more with less, often contending with greater public service demands despite weaker fiscal capacity. The spatial pattern highlights systemic inequality: where you live in Connecticut determines not only what you pay in taxes, but also reflects the long-standing socio-economic disparities embedded in housing, development, and municipal finance.
+  </p>
+</section>
 
-  <section>
-    <h2>2. Motivation</h2>
-    <p>
-      Why was this dataset chosen? What aspect of Connecticut’s housing or economy does it help explore?
-    </p>
-  </section>
+<section style="padding-top: 1rem; padding-bottom: 2rem;">
+  <iframe src="{{ site.baseurl }}/assets/images/MarketDemography/tax_rates_vs_home_prices.html" 
+          width="100%" height="500px" style="border:none; border-radius: 8px; display: block; margin: auto;">
+  </iframe>
+</section>
 
-  <section>
-    <h2>3. Data Preprocessing</h2>
-    <p>
-      Describe any filtering, cleaning, joining, column renaming, or transformations you did before analysis. Keep this section clear and concise.
-    </p>
-  </section>
+<section style="padding-top: 2rem;">
+  <h3>How Do Housing, Income, Taxation, and Population Interact?</h3>
+  <p style="text-align: justify;">
+    This heatmap reveals the interconnected dynamics between Connecticut towns' housing markets, incomes, tax burdens, and fiscal health. The strongest positive relationship appears between <strong>median sale price</strong> and <strong>per capita income</strong> (0.85), suggesting that wealthier communities naturally command higher home values. Conversely, <strong>mill rates</strong> show a moderate negative correlation with both income (-0.52) and sale prices (-0.43), reinforcing a familiar story: towns with higher incomes and home values tend to levy lower property tax rates. Interestingly, <strong>population size</strong> has little relationship with sale price (-0.03) or income (-0.27), but it correlates positively with <strong>grand list size</strong> (0.61), highlighting that larger towns accumulate greater taxable wealth even if individual incomes or property values vary. These patterns reflect structural inequalities across towns—where economic prosperity often enables more favorable taxation, while struggling communities face compounding disadvantages.
+  </p>
+</section>
 
-  <section>
-    <h2>4. Exploratory Analysis</h2>
+<section style="padding-top: 1rem; padding-bottom: 2rem;">
+  <img src="{{ site.baseurl }}/assets/images/MarketDemography/key_metric_correlation_heatmap.png" 
+       alt="Key Metric Correlations in Connecticut (2020)" 
+       style="width: 100%; border-radius: 8px; display: block; margin: auto;">
+</section>
 
-    <h3>Question 1: [Key Question Here]</h3>
-    <p>Short paragraph answering the question, highlighting a major trend or insight.</p>
-    <div class="viz-placeholder">[Insert chart or image for this question]</div>
 
-    <h3>Question 2: [Follow-up or spatial comparison]</h3>
-    <p>Brief explanation of what the data reveals here.</p>
-    <div class="viz-placeholder">[Insert second chart or image]</div>
+<!-- Affordability Index Analysis -->
+<section style="padding-top: 2rem;">
+  <h3>Measuring Housing Affordability Across Connecticut</h3>
+  <p style="text-align: justify;">
+    To assess housing affordability across Connecticut towns, we constructed a composite affordability index that considers both home purchase costs and property tax burdens relative to income. Specifically, the index combines the ratio of median home sale price to per capita income (price-to-income) and the ratio of annual property taxes to per capita income (tax-to-income). The formula assigns a 60% weight to purchase price affordability and a 40% weight to ongoing tax obligations, balancing up-front and recurring costs. A lower index value signifies a more affordable housing market, where residents are better able to buy and maintain property within their income means. This approach provides a nuanced, multi-dimensional view of housing affordability that goes beyond simple sale price comparisons.
+  </p>
+</section>
 
-    <h3>Question 3: [Temporal or correlation focus]</h3>
-    <p>Describe a deeper insight or relationship, supported by visual evidence.</p>
-    <div class="viz-placeholder">[Insert third chart or image]</div>
-    
-    <!-- Add more question-answer-plot blocks as needed -->
-  </section>
+<section style="padding-top: 1rem; padding-bottom: 2rem;">
+  <img src="{{ site.baseurl }}/assets/images/Integrated/top_5_affordable_towns.png" 
+       alt="Top 5 Most Affordable Towns in Connecticut" 
+       style="width: 100%; border-radius: 8px; display: block; margin: auto;">
+</section>
 
-  <section>
-    <h2>5. Conclusion</h2>
-    <p>
-      Summarize the main insights from the dataset. Optionally, link these findings to the other two domains (for combined synthesis).
-    </p>
-  </section>
+<section style="padding-top: 2rem;">
+  <p style="text-align: justify;">
+    The affordability index highlights five Connecticut towns where housing is most accessible to local residents: Cromwell, Sharon, New Hartford, Union, and Deep River. These towns scored lowest on the composite index, reflecting favorable combinations of moderate home prices and manageable tax burdens relative to local income levels. While Cromwell and Sharon stand out with particularly low cost-to-income ratios, Deep River remains accessible despite being closer to the shoreline. These findings provide valuable insight for homebuyers seeking budget-friendly communities and for planners considering strategies to enhance housing equity across the state.
+  </p>
+</section>
+
+<!-- Least Affordable Towns -->
+<section style="padding-top: 2rem;">
+  <h3>Where Housing Is Out of Reach: Least Affordable Towns</h3>
+  <p style="text-align: justify;">
+    On the other end of the spectrum, the affordability index reveals five Connecticut towns where housing costs weigh most heavily on local incomes: Greenwich, New Canaan, Mansfield, Darien, and Roxbury. These towns show the highest index scores, driven by steep home prices and, in some cases, disproportionately high property tax burdens relative to income. While towns like Greenwich and Darien are well-known for their wealth and luxury markets, high costs still present challenges for middle-income households or newcomers. Interestingly, Mansfield — a college town — appears here due to modest per capita income levels skewing the affordability metric despite moderate prices. These patterns underscore that high cost of living isn’t always tied to luxury — affordability gaps can arise from complex mixes of housing policy, income disparity, and valuation dynamics.
+  </p>
+</section>
+
+<section style="padding-top: 1rem; padding-bottom: 2rem;">
+  <img src="{{ site.baseurl }}/assets/images/Integrated/top_5_least_affordable_towns.png" 
+       alt="Top 5 Least Affordable Towns in Connecticut" 
+       style="width: 100%; border-radius: 8px; display: block; margin: auto;">
+</section>
+
+<!-- Least Affordable Towns -->
+<section style="padding-top: 2rem;">
+  <h3>Where Housing Is Out of Reach: Least Affordable Towns</h3>
+  <p style="text-align: justify;">
+    On the other end of the spectrum, the affordability index reveals five Connecticut towns where housing costs weigh most heavily on local incomes: Greenwich, New Canaan, Mansfield, Darien, and Roxbury. These towns show the highest index scores, driven by steep home prices and, in some cases, disproportionately high property tax burdens relative to income. While towns like Greenwich and Darien are well-known for their wealth and luxury markets, high costs still present challenges for middle-income households or newcomers. Interestingly, Mansfield — a college town — appears here due to modest per capita income levels skewing the affordability metric despite moderate prices. These patterns underscore that high cost of living isn’t always tied to luxury — affordability gaps can arise from complex mixes of housing policy, income disparity, and valuation dynamics.
+  </p>
+</section>
+
+<section style="padding-top: 1rem; padding-bottom: 2rem;">
+  <img src="{{ site.baseurl }}/assets/images/Integrated/top_5_least_affordable_towns.png" 
+       alt="Top 5 Least Affordable Towns in Connecticut" 
+       style="width: 100%; border-radius: 8px; display: block; margin: auto;">
+</section>
+
+
+
+
 </div>
