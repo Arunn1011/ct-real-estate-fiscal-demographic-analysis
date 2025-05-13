@@ -29,7 +29,7 @@ Our goal is to identify spatial and temporal patterns that contribute to structu
 
 ## Datasets and Sources
 
-- **Real Estate Sales (2001–2018)**  
+- **Real Estate Sales (2001–2022)**  
   Connecticut Office of Policy and Management / Data.gov  
   [https://catalog.data.gov/dataset/real-estate-sales-2001-2018](https://catalog.data.gov/dataset/real-estate-sales-2001-2018)
 
