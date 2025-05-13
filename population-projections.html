@@ -1,49 +1,123 @@
 ---
 layout: default
-title: [Your Page Title]
+title: Demographic Change and Population Projections in Connecticut (2015–2040)
 ---
 
+<style>
+  header.page-header {
+    display: none;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+    background: url('{{ site.baseurl }}/assets/images/765952-2048x1367-desktop-hd-hartford-connecticut-wallpaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .overlay {
+    background-color: rgba(255, 255, 255, 0.92);
+    min-height: 100vh;
+    padding: 2rem;
+  }
+
+  h1 {
+    color: #2c3e50;
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 0.2rem;
+  }
+
+  h2 {
+    color: #1a1a1a;
+    margin-top: 2rem;
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    color: #003366;
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+  }
+
+  p {
+    color: #444;
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+    text-align: justify;
+  }
+
+  .viz-placeholder {
+    background: #f0f0f0;
+    border-radius: 8px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+    font-style: italic;
+    margin: 1rem 0 2rem 0;
+  }
+
+  a {
+    color: #003366;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
+
 <div class="overlay">
-  <h1>[Your Page Title]</h1>
+  <h1>Demographic Change and Population Projections in Connecticut (2015–2040)</h1>
 
-  <section>
-    <h2>1. Dataset Description</h2>
-    <p>
-      Briefly introduce the dataset: what it contains, its source, the time span, and the unit of analysis (e.g., towns, years, transactions).
-    </p>
-  </section>
+<!-- Population Distribution -->
+<section style="padding-top: 2rem;">
+  <h3>How Are Connecticut’s Towns Populated?</h3>
+  <p style="text-align: justify;">
+    Most Connecticut towns are small to mid-sized, and this fact is starkly evident in the population distribution histogram. The bulk of municipalities fall under the 50,000-resident mark, with the mode centered between 10,000 and 20,000. Over 45 towns fall into the smallest bin (0–10,000), emphasizing Connecticut's identity as a state of small towns rather than sprawling urban centers. The right-skewed curve illustrates the rarity of large cities, with only a few towns exceeding 100,000 residents. This shape reflects a decentralized demographic landscape, where regional planning, service delivery, and economic development need to be tailored to scattered, moderately sized populations. The long tail hints at urban hubs like Bridgeport and New Haven, but the majority of residents live in towns where density is relatively low and local governance plays an outsized role in shaping daily life.
+  </p>
+</section>
 
-  <section>
-    <h2>2. Motivation</h2>
-    <p>
-      Why was this dataset chosen? What aspect of Connecticut’s housing or economy does it help explore?
-    </p>
-  </section>
+<section style="padding-top: 1rem; padding-bottom: 2rem;">
+  <img src="{{ site.baseurl }}/assets/images/Population/population_distribution_histogram.png" 
+       alt="Distribution of Connecticut Town Populations (2020)" 
+       style="width: 100%; border-radius: 8px; display: block; margin: auto;">
+</section>
+<!-- Top 10 Most Populous Towns -->
+<section style="padding-top: 2rem;">
+  <h3>Connecticut’s Urban Core: The 10 Most Populous Towns</h3>
+  <p style="text-align: justify;">
+    Bridgeport sits atop Connecticut's demographic hierarchy with nearly 300,000 residents, but what follows is a revealing tiered structure. New Haven and Hartford hover close behind, both crossing the 250,000 mark, forming the second tier of major urban anchors. The next cluster — including Stamford, Waterbury, Norwalk, and Danbury — forms a tightly packed group of regional economic hubs ranging from 170,000 to 225,000 residents. Their similar sizes suggest shared growth constraints: land availability, zoning policies, and infrastructure capacity. While Bridgeport holds a unique scale and historic industrial significance, the rest reflect a balanced mix of suburban character and commercial density. These demographic concentrations shape everything from school enrollment and housing needs to transit planning and healthcare demand.
+  </p>
+</section>
 
-  <section>
-    <h2>3. Data Preprocessing</h2>
-    <p>
-      Describe any filtering, cleaning, joining, column renaming, or transformations you did before analysis. Keep this section clear and concise.
-    </p>
-  </section>
+<section style="padding-top: 1rem; padding-bottom: 2rem;">
+  <img src="{{ site.baseurl }}/assets/images/Population/top_10_populous_towns.png" 
+       alt="Top 10 Most Populous Connecticut Towns (2020)" 
+       style="width: 100%; border-radius: 8px; display: block; margin: auto;">
+</section>
 
-  <section>
-    <h2>4. Exploratory Analysis</h2>
 
-    <h3>Question 1: [Key Question Here]</h3>
-    <p>Short paragraph answering the question, highlighting a major trend or insight.</p>
-    <div class="viz-placeholder">[Insert chart or image for this question]</div>
+<!-- High Dependency Ratios -->
+<section style="padding-top: 2rem;">
+  <h3>Where Aging Populations Are Reshaping Local Demographics</h3>
+  <p style="text-align: justify;">
+    The dependency ratio — the number of dependents per 100 working-age adults — offers a vital lens into the economic sustainability of towns. In Connecticut, five towns stand out with alarmingly high ratios above 83%, led by Bridgewater (97.7%) and Salisbury (94.0%). This means nearly one dependent for every working adult, stretching the capacity of local economies to support aging populations and young residents alike. These towns often feature characteristics like rural settings, retirement communities, or limited employment opportunities for younger workers. High dependency ratios create fiscal stress by reducing the effective tax base while increasing demand for services like healthcare, elder care, and school support. For policymakers and planners, these outliers are red flags — indicators of demographic imbalance that require proactive planning in workforce development, housing, and healthcare infrastructure.
+  </p>
+</section>
 
-    <h3>Question 2: [Follow-up or spatial comparison]</h3>
-    <p>Brief explanation of what the data reveals here.</p>
-    <div class="viz-placeholder">[Insert second chart or image]</div>
-
-    <h3>Question 3: [Temporal or correlation focus]</h3>
-    <p>Describe a deeper insight or relationship, supported by visual evidence.</p>
-    <div class="viz-placeholder">[Insert third chart or image]</div>
-    
-    <!-- Add more question-answer-plot blocks as needed -->
-  </section>
+<section style="padding-top: 1rem; padding-bottom: 2rem;">
+  <img src="{{ site.baseurl }}/assets/images/Population/dependency_ratio_towns.png" 
+       alt="Top 5 Towns by Dependency Ratio in Connecticut" 
+       style="width: 100%; border-radius: 8px; display: block; margin: auto;">
+</section>
 
   <section>
     <h2>5. Conclusion</h2>
