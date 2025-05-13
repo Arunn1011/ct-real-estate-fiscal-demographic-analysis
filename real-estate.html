@@ -99,7 +99,6 @@ title: Real Estate Sales Trends in Connecticut (2001–2022)
       Initial preprocessing focused on ensuring completeness and consistency of key fields. Records with missing values in essential columns such as "Property Type," "Date Recorded," and "Address" were removed to avoid unreliable aggregations. The "Date Recorded" column was converted into standardized datetime format to enable accurate time-series grouping. Town names were cleaned using title casing and whitespace trimming to ensure alignment with geographic shapefiles used in mapping. Duplicate or incomplete entries were implicitly removed through filtering operations. These steps produced a clean, structured dataset suitable for temporal and spatial analysis.
     </p>
   </section>
-
 <section>
   <h2>4. Analysis</h2>
 
@@ -107,43 +106,42 @@ title: Real Estate Sales Trends in Connecticut (2001–2022)
   <p>
     The Connecticut real estate market has undergone significant structural and cyclical shifts between 2001 and 2022. A longitudinal view of median property prices reveals a clear upward trajectory until 2007, followed by a pronounced decline during the financial crisis. Prices remained relatively stagnant for several years before entering a period of rapid growth beginning around 2020. This post-pandemic rise is likely associated with increased housing demand, low interest rates, and migration away from dense urban centers. The price recovery not only restored pre-crisis levels but exceeded them, signaling a broader transformation in regional housing dynamics.
   </p>
-  <div class="viz-placeholder">
-    <img src="{{ site.baseurl }}/assets/images/median prices trend.png" alt="Median Sale Price Trend Over Time">
+  <div>
+    <img src="{{ site.baseurl }}/assets/images/Real_estate/median prices trend.png" alt="Median Sale Price Trend Over Time" style="width:100%; max-width:900px;">
   </div>
 
   <h3>What is the distribution of sale prices across property types?</h3>
   <p>
     When comparing sale prices by property type, residential and apartment units display the most concentrated price distributions, with moderate medians and relatively tight interquartile ranges. In contrast, commercial and industrial transactions exhibit broader dispersion and higher price ceilings, indicating greater volatility and value diversity within those categories. A log-scaled boxplot helps uncover hidden outliers and skewed distributions that would otherwise be obscured in linear plots.
   </p>
-  <div class="viz-placeholder">
-    <img src="{{ site.baseurl }}/assets/images/proeprty type and amount distribution.png" alt="Distribution of Sale Prices by Property Type">
+  <div>
+    <img src="{{ site.baseurl }}/assets/images/Real_estate/proeprty type and amount distribution.png" alt="Distribution of Sale Prices by Property Type" style="width:100%; max-width:900px;">
   </div>
 
   <h3>Which property types dominate Connecticut’s real estate market?</h3>
   <p>
     The volume of transactions further reinforces the residential sector’s central role in the state's property market. Horizontal bar plots of property type frequency show that residential properties constitute the overwhelming majority of transactions, far outpacing commercial, vacant land, and other categories. This imbalance underscores the relevance of focusing on housing trends as the core of statewide real estate analysis.
   </p>
-  <div class="viz-placeholder">
-    <img src="{{ site.baseurl }}/assets/images/property wise distribution-counts.png" alt="Property Type Transaction Volume">
+  <div>
+    <img src="{{ site.baseurl }}/assets/images/Real_estate/property wise distribution-counts.png" alt="Property Type Transaction Volume" style="width:100%; max-width:900px;">
   </div>
 
   <h3>Where are property values highest and lowest across the state?</h3>
   <p>
     Spatial disparities in property value are also apparent at the municipal level. A choropleth map of median sale prices by town highlights significant regional variation, with coastal and metropolitan-adjacent towns like Greenwich, Westport, and Darien displaying markedly higher median prices compared to more rural or inland communities. These differences reflect not only market demand but also broader socio-economic stratification across the state.
   </p>
-  <div class="viz-placeholder">
-    <iframe src="{{ site.baseurl }}/assets/html/ct_median_sale_price_map_formatted.html" width="100%" height="500px" style="border:none;"></iframe>
+  <div>
+    <iframe src="{{ site.baseurl }}/assets/images/Real_estate/ct_median_sale_price_map_formatted.html" width="100%" height="500px" style="border:none;"></iframe>
   </div>
 
   <h3>Are sale prices aligned with municipal assessed values?</h3>
   <p>
     To assess the fairness and consistency of valuations, we compare sale prices with assessed values using the sale-to-assessment ratio. A second spatial visualization shows that certain towns consistently sell above or below their assessed values, suggesting disparities in municipal valuation practices. These findings may have implications for property taxation policy and perceptions of equity among property owners.
   </p>
-  <div class="viz-placeholder">
-    <iframe src="{{ site.baseurl }}/assets/html/connecticut_median_sale_to_assessed_ratio.html" width="100%" height="500px" style="border:none;"></iframe>
+  <div>
+    <iframe src="{{ site.baseurl }}/assets/images/Real_estate/connecticut_median_sale_to_assessed_ratio.html" width="100%" height="500px" style="border:none;"></iframe>
   </div>
 </section>
-
 
   <section>
     <h2>5. Conclusion</h2>
