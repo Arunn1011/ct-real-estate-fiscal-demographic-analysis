@@ -1,54 +1,119 @@
 ---
 layout: default
-title: [Your Page Title]
+title: Fiscal Landscape and Taxation Patterns in Connecticut (2019–2024)
 ---
 
+<style>
+  header.page-header {
+    display: none;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+    background: url('{{ site.baseurl }}/assets/images/765952-2048x1367-desktop-hd-hartford-connecticut-wallpaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .overlay {
+    background-color: rgba(255, 255, 255, 0.92);
+    min-height: 100vh;
+    padding: 2rem;
+  }
+
+  h1 {
+    color: #2c3e50;
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 0.2rem;
+  }
+
+  h2 {
+    color: #1a1a1a;
+    margin-top: 2rem;
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    color: #003366;
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+  }
+
+  p {
+    color: #444;
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+    text-align: justify;
+  }
+
+  .viz-placeholder {
+    background: #f0f0f0;
+    border-radius: 8px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+    font-style: italic;
+    margin: 1rem 0 2rem 0;
+  }
+
+  a {
+    color: #003366;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
+
 <div class="overlay">
-  <h1>[Your Page Title]</h1>
+  <h1>Fiscal Landscape and Taxation Patterns in Connecticut (2019–2024)</h1>
 
   <section>
-    <h2>1. Dataset Description</h2>
-    <p>
-      Briefly introduce the dataset: what it contains, its source, the time span, and the unit of analysis (e.g., towns, years, transactions).
+    <h3>Trends in Municipal Wealth: Grand List Growth</h3>
+    <p style="text-align: justify;">
+      The Grand List, representing the total assessed value of taxable property in a town, is a critical indicator of local fiscal health. From 2019 to 2023, several municipalities demonstrated consistent growth in their Grand List values, reflecting economic expansion, new construction, and rising property assessments. Visualizing these trends helps identify towns with the most robust tax bases over time.
     </p>
+    <div class="viz-placeholder">
+      <img src="{{ site.baseurl }}/assets/images/Fiscal/grandlist_growth.png" alt="Grand List Growth Over Time" style="width: 100%; border-radius: 8px;">
+    </div>
   </section>
 
   <section>
-    <h2>2. Motivation</h2>
-    <p>
-      Why was this dataset chosen? What aspect of Connecticut’s housing or economy does it help explore?
+    <h3>Does Population Growth Translate into Wealth Expansion?</h3>
+    <p style="text-align: justify;">
+      A scatter plot comparing changes in town population with changes in Grand List values reveals mixed trends. While some towns show a positive correlation between population growth and fiscal expansion, others exhibit stagnant or declining Grand List values despite growing populations. This suggests that increased population alone does not guarantee increased taxable value, emphasizing the role of zoning, development policy, and housing markets.
     </p>
+    <div class="viz-placeholder">
+      <img src="{{ site.baseurl }}/assets/images/Fiscal/population_vs_grandlist.png" alt="Population vs Grand List Change" style="width: 100%; border-radius: 8px;">
+    </div>
   </section>
 
   <section>
-    <h2>3. Data Preprocessing</h2>
-    <p>
-      Describe any filtering, cleaning, joining, column renaming, or transformations you did before analysis. Keep this section clear and concise.
+    <h3>Where Are Property Tax Rates Highest?</h3>
+    <p style="text-align: justify;">
+      Mill rates determine the property tax paid per $1,000 of assessed value and vary widely across towns. In 2022, the highest mill rates were concentrated in urban centers and fiscally constrained municipalities. These towns often carry heavier service burdens and limited taxable property, which may drive up rates to fund essential services.
     </p>
+    <div class="viz-placeholder">
+      <img src="{{ site.baseurl }}/assets/images/Fiscal/top10_highest_millrate_2022.png" alt="Top 10 Highest Mill Rate Towns (2022)" style="width: 100%; border-radius: 8px;">
+    </div>
   </section>
 
   <section>
-    <h2>4. Exploratory Analysis</h2>
-
-    <h3>Question 1: [Key Question Here]</h3>
-    <p>Short paragraph answering the question, highlighting a major trend or insight.</p>
-    <div class="viz-placeholder">[Insert chart or image for this question]</div>
-
-    <h3>Question 2: [Follow-up or spatial comparison]</h3>
-    <p>Brief explanation of what the data reveals here.</p>
-    <div class="viz-placeholder">[Insert second chart or image]</div>
-
-    <h3>Question 3: [Temporal or correlation focus]</h3>
-    <p>Describe a deeper insight or relationship, supported by visual evidence.</p>
-    <div class="viz-placeholder">[Insert third chart or image]</div>
-    
-    <!-- Add more question-answer-plot blocks as needed -->
-  </section>
-
-  <section>
-    <h2>5. Conclusion</h2>
-    <p>
-      Summarize the main insights from the dataset. Optionally, link these findings to the other two domains (for combined synthesis).
+    <h3>Towns with the Lowest Property Tax Burdens</h3>
+    <p style="text-align: justify;">
+      Conversely, towns with the lowest mill rates in 2022 tend to be affluent suburban communities with strong Grand Lists, often supported by high-value residential and commercial real estate. These municipalities benefit from a broader tax base and require lower tax rates to meet budgetary needs, highlighting stark fiscal contrasts across the state.
     </p>
+    <div class="viz-placeholder">
+      <img src="{{ site.baseurl }}/assets/images/Fiscal/top10_lowest_millrate_2022.png" alt="Top 10 Lowest Mill Rate Towns (2022)" style="width: 100%; border-radius: 8px;">
+    </div>
   </section>
 </div>
