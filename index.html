@@ -4,13 +4,7 @@ title: "CT Real Estate, Fiscal & Demographic Analysis"
 ---
 
 <style>
-   
-/* Hide Cayman theme header */
-/*
-header.page-header {
-    display: none;
-}
-*/
+  header.page-header { display: none; }
 
   body {
     margin: 0;
@@ -21,7 +15,7 @@ header.page-header {
   }
 
   .overlay {
-    background-color: rgba(255, 255, 255, 0.92); /* translucent white */
+    background-color: rgba(255, 255, 255, 0.92);
     min-height: 100vh;
     padding: 2rem;
   }
@@ -30,30 +24,32 @@ header.page-header {
     color: #2c3e50;
     font-size: 2.8rem;
     text-align: center;
-    margin-bottom: 0.2rem;
+    margin-bottom: 1rem;
   }
 
-  p em {
-    display: block;
+  p.lead {
     text-align: center;
     margin-bottom: 2.5rem;
     font-size: 1.2rem;
     color: #555;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   section {
     background: #ffffff;
     padding: 2rem;
     margin: 2rem auto;
-    max-width: 900px;
+    max-width: 1000px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   }
 
   h2 {
     color: #1a1a1a;
-    margin-top: 0;
     font-size: 1.6rem;
+    margin-top: 0;
   }
 
   ul {
@@ -62,32 +58,85 @@ header.page-header {
 
   li {
     margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+
+  a {
+    color: #003366;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 
   strong {
     color: #003366;
   }
+
+  .footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 2rem;
+  }
 </style>
 
 <div class="overlay">
   <h1>CT Real Estate, Fiscal & Demographic Analysis</h1>
-  <p><em>Exploring two decades of housing, taxation, and population shifts across Connecticut</em></p>
+  <p class="lead">
+    A comprehensive exploration of how housing prices, municipal finances, and population trends have evolved across Connecticut's towns over the past two decades.
+  </p>
 
   <section>
-    <h2>📊 What You’ll Discover</h2>
+    <h2>Project Overview</h2>
+    <p>
+      This project investigates patterns in Connecticut's real estate transactions, fiscal indicators, and demographic shifts from 2001 to 2040. Using publicly available datasets, we aim to identify how property values, taxation capacity, and population dynamics interact to shape the housing and economic landscape of the state. The findings are intended to support data-driven policy analysis and spatial decision-making.
+    </p>
+  </section>
+
+  <section>
+    <h2>Datasets and Sources</h2>
     <ul>
-      <li><strong>Real Estate:</strong> Trends in property values and transaction volumes</li>
-      <li><strong>Taxation:</strong> Local fiscal health across Connecticut towns</li>
-      <li><strong>Demographics:</strong> Shifts in populationss, age, and diversity over time</li>
+      <li>
+        <strong>Real Estate Sales (2001–2022):</strong> 
+        Property transaction data collected from the Connecticut Open Data Portal.
+        <br><a href="https://data.ct.gov/Housing/Real-Estate-Sales-2001-2022-GL/5mzw-sjtu" target="_blank">Source: CT Open Data Portal</a>
+      </li>
+      <li>
+        <strong>Municipal Fiscal Indicators (2019–2024):</strong> 
+        Economic and grand list data by municipality, provided by the Office of Policy and Management (OPM).
+        <br><a href="https://data.ct.gov/Finance/Municipal-Fiscal-Indicators-Economic-and-Grand-Li/dq5c-8b7s" target="_blank">Source: OPM / CT Open Data Portal</a>
+      </li>
+      <li>
+        <strong>Town Population Projections (2015–2040):</strong> 
+        Long-term demographic forecasts from the Connecticut State Data Center.
+        <br><a href="https://data.ct.gov/Demographics/Connecticut-Town-Population-Projections-2015-2040/sm89-5r9j" target="_blank">Source: CT State Data Center</a>
+      </li>
     </ul>
   </section>
 
   <section>
-    <h2>📍 Navigation</h2>
+    <h2>Explore Analyses</h2>
     <ul>
-      <li><a href="{{ site.baseurl }}/about.html">About This Project</a></li>
-      <li><a href="{{ site.baseurl }}/data.html">Explore the Data</a></li>
-      <li><a href="{{ site.baseurl }}/visualization.html">Visualizations</a></li>
+      <li><a href="{{ site.baseurl }}/real-estate.html">Real Estate Sales Trends in Connecticut (2001–2022)</a></li>
+      <li><a href="{{ site.baseurl }}/fiscal-indicators.html">Municipal Fiscal and Economic Analysis (2019–2024)</a></li>
+      <li><a href="{{ site.baseurl }}/population-projections.html">Demographic Projections and Housing Implications (2015–2040)</a></li>
     </ul>
   </section>
+
+  <section>
+    <h2>Project Team</h2>
+    <ul>
+      <li><strong>Arun Kumar Dhuraisamy</strong> – s242529</li>
+      <li><strong>Chinmay Prasad Dongarkar</strong> – s250155</li>
+      <li><strong>Sarah Abigail Tauro</strong> – s243927</li>
+    </ul>
+    <p><strong>Group 17 – Social Data Analysis and Visualization</strong></p>
+  </section>
+
+  <div class="footer">
+    CT Real Estate & Demographic Analysis – Group 17, DTU 02806
+  </div>
+
 </div>
