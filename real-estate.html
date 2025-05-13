@@ -1,0 +1,56 @@
+---
+layout: default
+title: Real Estate Sales Trends in Connecticut (2001–2022)
+---
+
+<div class="overlay">
+    <h1>Real Estate Sales Trends in Connecticut (2001–2022)</h1>
+
+    <section>
+    <h2>1. Dataset Description</h2>
+    <p>
+        The dataset, maintained by the Connecticut Office of Policy and Management, contains all recorded real estate sales valued at $2,000 or more from fiscal years 2001 through 2022. Each record corresponds to a property transaction reported between October 1 and September 30 of a given fiscal year and includes key attributes such as the sale date, property address, town, property type, sale amount, and assessed value. The dataset spans residential, commercial, industrial, apartment, and vacant land transactions, offering a comprehensive view of the real estate landscape across Connecticut municipalities.
+        <br><br>
+        <strong>Source:</strong> <a href="https://www.ct.gov/opm" target="_blank">Connecticut Office of Policy and Management (OPM)</a>
+    </p>
+    </section>
+
+    <section>
+    <h2>2. Motivation</h2>
+    <p>
+        Understanding long-term real estate trends is essential for analyzing economic cycles, housing affordability, and patterns of urban development. Given real estate's critical role in household wealth, municipal revenue, and community growth, this analysis investigates how property values and transaction activity have evolved across Connecticut’s towns over the past two decades. The primary objectives are to identify long-term price trends, detect regional disparities, and understand the impact of major market events such as the 2008 financial crisis and the COVID-19 pandemic. This analysis also explores the relationship between sales prices and assessed values to evaluate valuation consistency and equity.
+    </p>
+    </section>
+
+    <section>
+    <h2>3. Data Preprocessing</h2>
+    <p>
+        Initial preprocessing focused on ensuring completeness and consistency of key fields. Records with missing values in essential columns such as "Property Type," "Date Recorded," and "Address" were removed to avoid unreliable aggregations. The "Date Recorded" column was converted into standardized datetime format to enable accurate time-series grouping. Town names were cleaned using title casing and whitespace trimming to ensure alignment with geographic shapefiles used in mapping. Duplicate or incomplete entries were implicitly removed through filtering operations. These steps produced a clean, structured dataset suitable for temporal and spatial analysis.
+    </p>
+    </section>
+
+  <section>
+    <h2>4. Exploratory Analysis</h2>
+
+    <h3>Question 1: [Key Question Here]</h3>
+    <p>Short paragraph answering the question, highlighting a major trend or insight.</p>
+    <div class="viz-placeholder">[Insert chart or image for this question]</div>
+
+    <h3>Question 2: [Follow-up or spatial comparison]</h3>
+    <p>Brief explanation of what the data reveals here.</p>
+    <div class="viz-placeholder">[Insert second chart or image]</div>
+
+    <h3>Question 3: [Temporal or correlation focus]</h3>
+    <p>Describe a deeper insight or relationship, supported by visual evidence.</p>
+    <div class="viz-placeholder">[Insert third chart or image]</div>
+    
+    <!-- Add more question-answer-plot blocks as needed -->
+  </section>
+
+  <section>
+    <h2>5. Conclusion</h2>
+    <p>
+      Summarize the main insights from the dataset. Optionally, link these findings to the other two domains (for combined synthesis).
+    </p>
+  </section>
+</div>
